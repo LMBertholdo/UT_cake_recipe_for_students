@@ -1,0 +1,52 @@
+\newpage
+\section{Related Work and Background Information}
+In this section, we will show some related works to our research. We will also explain some basic background information, which is necessary to understand the results of our research.
+
+\subsection{Related works}
+The works we look for are works that compare or analyze the available methods for passive and active cybersecurity assessment. In "A comparison of cybersecurity risk analysis tools"\citep{ROLDANMOLINA2017568} the authors do a comparison showing the differences between a few available cybersecurity risk management tools. However, one of the less relevant parts of this research is that it goes into great depth about tools being used for active cybersecurity, while we want to look at the methods behind those tools.
+
+A really recent work on the same topic is "Review of Cybersecurity Assessment Methods: Applicability \newline Perspective\citep{LESZCZYNA2021102376}. In this work the author points out that currently there are very few available reviews cybersecurity assessment methods, which is the same problem as we pointed out. One of the key differences of this research is that it mostly discusses the actual tools. For example, it compares a lot of different penetration testing tools with each other, while we are mostly interested in the actual method of penetration testing as a whole.
+
+\subsection{NIST five function model}
+In the introduction we spoke about the five functions NIST proposes that every company should do in order to protect themselves from cyberattacks. We will introduce the five functions here.
+
+
+\textbf{The identify}
+ activity of the NIST cybersecurity framework is the first activity a company should take and is logic wise the first step of the full activity circle. To comply with this function, companies must develop and understand their environment to manage the cybersecurity risks to systems, data and assets. Examples of activities are: full visibility of digital and physical assets and their interconnections and making sure the company knows their risks and exposures and put policies or procedures in place to manage or reduce those risks. This step is necessary to take before a company can proceed with step two, as you can't protect yourself if you don't know what you are protecting.
+
+\textbf{The protect}
+ activity requires a company to outline appropriate safeguards to ensure the critical infrastructure of the company to keep working. The protect activity is established that in case of a cyberattack, the impact will be as limited as possible. Examples of activities that can take place in this function are employee awareness training (to prevent phishing attacks) or protocols for user access (requirements to a password, ways of identification for an employee)
+
+
+
+\textbf{The detect}
+ activity is focused on allowing the company to quickly react in case of a cyber attack. This means that in case a malicious event occurs, the company should have policies in place that make sure this event is detected timely to reduce the impact of the attack. Examples of activities that take place here are the creation or placement of a network intrusion detection system and making sure that the company always has insights in their current networks.
+
+
+The other two functions defined by NIST are respond and recover, which are not relevant to our research. Therefore we will not go in-depth about those two.
+
+\subsection{Passive and active cybersecurity assessment methods}
+ We will shortly introduce the passive cybersecurity assessment methods, this can be used as a glossary to later come back to in case knowledge about the method is assumed.
+ \begin{itemize}	
+	\item The Common Vulnerability Scoring System (CVSS) is a system that scores threats based on how severe these are. It works with a weighted calculator.\citep{CVSS}
+	\item STRIDE is a threat model methodology that looks at a system and asks the question: "What could go wrong?". It includes a full breakdown of the system’s processes, data stores, data flows \& trust boundaries.\citep{Whati4967383:online}
+	\item PASTA is a framework that consists of 7 stages, which includes way more than just a threat model. (It includes things like Risk \& Impact analysis \& defining business objectives)\citep{WHATI1132766:online}
+	\item LINDDUN is a 3 step framework with the following steps: Model the system, Elicit threats and Manage threats.\citep{LINDD5512475:online}
+	\item Attack Trees are a technical way of modeling security threats. It is mostly used as a part of other threat models. It includes a step-wise diagram of how a certain part of a system is accessed. (to find out where it can go wrong)\citep{Acade2182618:online}
+	\item Persona Non Grata (PnG) has its focus on the person behind an attack instead of the threat itself. It considers motivations and skills needed, forcing analysts to look at the system from the attack point of view.\citep{MeadAHybrid2018}
+	\item Security Cards is a method that uses a deck of cards to answer questions like: "who might attack? and "why will they attack?". It is more of a brainstorming technique rather than a formal method. \citep{MeadAHybrid2018}
+	\item Trike is a risk model which includes a threat model in its method. It is based on assets, roles, human actions, and calculated risks. \citep{Trike7987253:online}
+	\item Visual, Agile, and Simple Threat (VAST) is a threat model that makes two types of models: Application threat models \& operational threat models. This allows you to view both the architectural and the attacker's point of view.\citep{Secur7871605:online}
+\end{itemize}
+
+The following 7 active cybersecurity assessment methods will be discussed and considered in the paper.
+\begin{itemize}
+    \item Network mapping is a method to visualize your network and every device connected to it. The point of it is to generate easy to understand graphical images on how the devices on your network are performing.\citep{WhatI7989243:online}
+    \item Vulnerability scanning is an inspection of potential entry/exploit points on a computer or a network. Normally you would attempt 2 different scans: authenticated and unauthenticated. Authenticated means finding out what an employee can access/exploit, while unauthenticated is what anyone can do.\citep{Whatt4625369:online}
+    \item Phishing assessment is an inspection of employee awareness in a company. The method is focused on contacting employees with phishing attempts and find out how they respond to it.\citep{Phish2261941:online}
+    \item Web-app assessment is a vulnerability scan specifically for web applications. The goal is to find all vulnerabilities and provide the company with ways to patch those.\citep{Howse3584547:online}
+    \item OS security assessment is a vulnerability scan specifically targeted at the firewall, antivirus, intrusion detection software, and any other type of cybersecurity software that is running on the system.\citep{Opera9350454:online}
+    \item Database assessment is a vulnerability scan targeted at databases, using known vulnerabilities and different attack scenarios.\citep{Datab9544661:online}
+    \item Penetration testing is a simulation of a cyber attack against a company, meaning it will try anything to get into the system.\citep{Whati8920180:online}
+\end{itemize}
+

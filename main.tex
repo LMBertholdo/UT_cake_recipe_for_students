@@ -1,0 +1,211 @@
+% This is "bach-ref-2009.tex" Updated january 29th 2010.
+% This file should be compiled with "sig-alternate-fixed.cls" January 2010.
+% It is based on the ACM style "sig-alternate.cls"
+% -------------------------------------------------------------------------
+% This example file demonstrates the use of the 'sig-alternate-fixed.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to the Twente Student Conference on IT. Both this file as the 
+% document class file are based upon ACM documents.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line TSConIT
+%       4) NO headers and/or footers
+%
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+
+% refers to the cls file being used
+\documentclass{sig-alternate-br}
+
+%USING SIGCOM TEMPLATE
+%\documentclass[sigconf,natbib=true]{acmart}
+%\settopmatter{printacmref=false} % Removes citation information below abstract
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
+%-------------------------------------------------------------------------------
+% PACKAGES 
+%-------------------------------------------------------------------------------
+%\usepackage{comment}
+\usepackage{xcolor}
+\usepackage{natbib}
+
+%-------------------------------------------------------------------------------
+% PACKAGES FOR URL
+%-------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{colorlinks, citecolor=blue, filecolor=blue, linkcolor=blue, urlcolor=blue}
+\usepackage{breakurl}
+%\usepackage[hyphens]{url}
+
+%-------------------------------------------------------------------------------
+% PACKAGES AND COMMANDS FOR TABLES 
+%-------------------------------------------------------------------------------
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{color,colortbl,xcolor}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%-------------------------------------------------------------------------------
+% PACKAGES FOR FIGURES
+%-------------------------------------------------------------------------------
+\usepackage{graphicx,graphics,float,subfigure,wrapfig,epstopdf}
+\usepackage{dblfloatfix}%to fix the problem of [h!] [t!] [!b]
+\epstopdfsetup{update}
+%-------------------------------------------------------------------------------
+% PACKAGES FOR REFERENCE LIST FORMAT 
+%-------------------------------------------------------------------------------
+%\usepackage[square,numbers]{natbib}
+%options: round; square; curly; angle; colon; comma; authoryear; numbers; 
+%         super; sort; sort&compress; longnamesfirst; sectionbib; nonamebreak;
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}} 
+% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+
+%-------------------------------------------------------------------------------
+% PACKAGE FOR CREATING GANTT VISUALIZATION (PLANNING TABLE) 
+%-------------------------------------------------------------------------------
+\usepackage{soul}
+\usepackage{libs/gantt} %for the planning table
+%-------------------------------------------------------------------------------
+% CREATING COMMANDS FOR AUTOREF 
+%-------------------------------------------------------------------------------
+\renewcommand{\chapterautorefname }{\S}
+\renewcommand{\sectionautorefname}{\S}
+\renewcommand{\subsectionautorefname}{\S}
+\renewcommand{\subsubsectionautorefname}{\S}
+\newcommand{\subfigureautorefname}{\figureautorefname}
+%-------------------------------------------------------------------------------
+% CREATING COMMANDS FOR MAKING COMMENTS
+%-------------------------------------------------------------------------------
+\newcommand\comment[1]{{\color{blue} \noindent\sffamily\textbf{[COMMENT: #1]}}}
+%\renewcommand\comment[1]{{ \sffamily [xxx:  #1]}}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+\begin{document}
+%
+% --- Author Metadata here --- DO NOT REMOVE OR CHANGE 
+\conferenceinfo{28$^{th}$ Twente Student Conference on IT}{Febr. 2$^{nd}$, 2018, Enschede, The Netherlands.}
+\CopyrightYear{2018} % Allows default copyright year (200X) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{PaperCake Recipe for Students}
+% In Bachelor Referaat at University of Twente the use of a subtitle is discouraged.
+% \subtitle{[Instructions]}
+
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{2} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Student name\\
+       \affaddr{University of Twente}\\
+       \affaddr{P.O. Box 217, 7500AE Enschede}\\
+       \affaddr{The Netherlands}\\
+	   \email{student@student.utwente.nl}
+%\alignauthor
+% Leandro M. Bertholdo\\
+% 	   \affaddr{University of Twente}\\
+%        \affaddr{P.O. Box 217, 7500AE Enschede}\\
+%        \affaddr{The Netherlands}\\
+% 	   \email{l.m.bertholdo@utwente.nl}\\
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+% \additionalauthors{Additional authors: John Smith (The
+% Th{\o}rv{\"a}ld Group, email: {\texttt{jsmith@affiliation.org}})
+% and Julius P.~Kumquat (The Kumquat Consortium, email:
+% {\texttt{jpkumquat@consortium.net}}).}
+% \date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+%-------------------------------------------------------------------------------%
+\begin{abstract}
+The structure of an abstract should have the (i) context, (ii) problem, (iii) how your proposal is different from the literature (without saying what you propose), (iv) your proposal, and (v) your most astonishing finding (or [if proposal] your expected scientific contribution(s)). Your goal is to meet $\pm$100 words. The ``context'' part describes what your reader should know to understand your research. The ``problem'' part describes why your research need to be done; why it is interesting; and why someone needs to spend time reading your work. In the ``how your proposal is different'' you should say what is the main issue in similar works that you intend to solve. The ``proposal'' part describes what your proposal and the overall methodology to achieve your proposal (goal). Finally, your ``findings'' part I recommend you to surprise your reader, make him VERY interested to read your paper. If your ``findings'' part is related to a proposal document then you should describe what do you expect (intend) to be your scientific contribution.
+\end{abstract}
+
+\keywords{Keywords are your own designated keywords.}
+\input{sections/01_introduction}
+\input{sections/02_relatedwork}
+\input{sections/03_methodologies}
+\input{sections/04_planning}
+\input{sections/04_results}
+\input{sections/05_conclusions.tex}
+%-------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------
+%\newcommand{\newblock}{}
+
+\def\UrlBreaks{\do\/\do-}
+\bibliographystyle{abbrvnat} %abbrvnat OR unsrtnat OR plainnat
+\bibliography{my_bibliography}
+%-------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------
+\input{sections/IMPORTANT}
+\balancecolumns
+\end{document}
+
